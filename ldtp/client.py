@@ -74,7 +74,7 @@ class _Method(xmlrpclib._Method):
                                                                           for k, v in kwargs.items()])))
         try:
             return self.__send(self.__name, args)
-        catch BaseException as be:
+        except BaseException as be:
             logger.debug('%s(%s) Trying once more' % (self.__name, str(be)))
         return return self.__send(self.__name, args)
 
