@@ -76,7 +76,7 @@ class _Method(xmlrpclib._Method):
             return self.__send(self.__name, args)
         except BaseException as be:
             logger.debug('%s(%s) Trying once more' % (self.__name, str(be)))
-        return return self.__send(self.__name, args)
+        return self.__send(self.__name, args)
 
 class Transport(xmlrpclib.Transport):
     def _handle_signal(self, signum, frame):
